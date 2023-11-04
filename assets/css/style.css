@@ -1055,6 +1055,24 @@ a:hover {
   padding: 0;
 }
 
+.back-btn {
+  display: block;
+  width: 200px;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  transition: font-size 0.3s; /* Adding transition effect to font-size */
+}
+
+.back-btn:hover {
+  background-color: #45a049;
+  color: white;
+  font-size: 15px; /* Increase font size on hover */
+}
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
