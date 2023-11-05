@@ -854,12 +854,13 @@
                   <div class="col-md-6">
                     <div class="title-box-2">
                       <h5 class="title-left">
-                        Send Message Us
+                        Contact Me
                       </h5>
                     </div>
                     <div>
-                      <form name="contact" netlify netlify-honeypot="bot-field" action="/success" method="post" class="php-email-form">
-                        <input type="hidden" name="form-name" value="contact" />
+                      <form name="contact" netlify netlify-honeypot="bot-field" class="php-email-form">
+                        <input type="hidden" name="Contact-Form" value="contact" />
+                        
                         <div class="row">
                             <div class="col-md-12 mb-3">
                                 <div class="form-group">
@@ -948,6 +949,25 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('form');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        // Your form submission handling logic here, for example, you can use fetch or other methods to send the form data
+  
+        // Display the confirmation message
+        const sentMessage = document.querySelector('.sent-message');
+        sentMessage.textContent = 'Thank you! I\'ll get back to you soon.';
+        sentMessage.style.display = 'block';
+  
+        // Reset the form after submission
+        form.reset();
+      });
+    });
+  </script>
+  
 
 </body>
 
