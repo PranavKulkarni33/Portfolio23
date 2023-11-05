@@ -239,6 +239,36 @@ a:hover {
   transition: all 500ms ease;
 }
 
+.socials1 {
+  padding: 1.5rem 0;
+}
+
+.socials1 ul li {
+  display: inline-block;
+}
+
+.socials1 .ico-circle {
+  height: 40px;
+  width: 40px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  line-height: 40px;
+  margin: 0 15px 0 0;
+  background-color: #000; /* Change the background color to black */
+  color: #fff; /* Change the icon color to white */
+  text-align: center;
+  box-shadow: 0 0 0 3px #fff;
+  transition: all 500ms ease;
+}
+
+.socials1 .ico-circle:hover {
+  background-color: #0078ff; /* Change the background color on hover */
+  box-shadow: 0 0 0 3px #cde1f8;
+  transition: all 500ms ease;
+}
+
+
+
 /*------/ Ul resect /------*/
 .ul-resect,
 .widget-tags ul,
@@ -1143,6 +1173,78 @@ a:hover {
 .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #fff;
 }
+
+
+
+.achievements {
+  padding: 2rem 0;
+}
+
+.achievements .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.achievements .achievement-box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.achievements .achievement-box .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.achievements .achievement-box .image img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.achievements .achievement-box .content .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+  color: #fff; /* Change text color to white */
+}
+
+.achievements .achievement-box .content .description {
+  font-size: 1rem;
+  color: #fff; /* Change text color to white */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .achievements .achievement-box {
+    padding: 1.5rem;
+  }
+
+  .achievements .achievement-box .title {
+    font-size: 1.2rem;
+  }
+
+  .achievements .achievement-box .description {
+    font-size: 1rem;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
 
 /*--------------------------------------------------------------
 # Contact
