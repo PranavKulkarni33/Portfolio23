@@ -1,0 +1,249 @@
+
+  
+  #about {
+    background: linear-gradient(135deg, #000111 0%, #000000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  @media screen and (max-width: 1024px) {
+    #about{
+      height: 125vh;
+    }
+  }
+  
+  .illustration-editor {
+    margin-top: 0;
+    display: grid;
+    grid-template-rows: 24px auto;
+    justify-items: center;
+    position: relative;
+  }
+  @media (min-width: 1024px) {
+    .illustration-editor {
+      margin-right: -20rem;
+    }
+  }
+  
+  .code {
+    position: absolute;
+    /* width: 290px;
+    height: 145px; */
+    background: #1D1E22;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    z-index: 5;
+  }
+  .code header {
+    display: grid;
+    grid-template-columns: 36px auto 36px;
+    align-items: center;
+  }
+  .code header svg {
+    margin: 10px;
+  }
+  .code header h1 {
+    font-family: Lato, sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 1.57px;
+    color: #C5C8D4;
+    margin: 0;
+  }
+  .code-html {
+    width: 30rem;
+    height: 35rem;
+    left: -20rem;
+    top: -5rem;
+  }
+  .code-css {
+    width: 13rem;
+    line-height: 0.8rem;
+    height: 18rem;
+    left: 16vw;
+    top: 6rem;
+  }
+  .code-js {
+    left: 10rem;
+    top: 360px;
+  }
+  .code .code-content {
+    margin: 0 10px 10px;
+    color: white;
+  }
+  .code .code-content .c-r {
+    color: #A88038;
+  }
+  .code .code-content .c-o {
+    color: #DE7300;
+  }
+  .code .code-content .c-y {
+    color: #E1CA72;
+  }
+  .code .code-content .c-g {
+    color: #74B087;
+  }
+  .code .code-content .c-p {
+    color: #9F8198;
+  }
+  .code .code-content .c-b {
+    color: #7A99AD;
+  }
+  .code .code-content .c-c {
+    color: #666666;
+  }
+  .code-css .code-content code {
+    margin: 0;
+    margin-left: 1rem;
+    border-right: 0.15em solid transparent;
+  }
+  
+  .editor-block {
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 421px;
+    background: linear-gradient(109.61deg, #4C4F5A 4.26%, #202125 84.84%);
+    border-radius: 10px;
+  }
+  
+  @keyframes typing-1 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 60px;
+    }
+  }
+  @keyframes typing-2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
+  }
+  @keyframes typing-3 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70px;
+    }
+  }
+  @keyframes typing-4 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 75px;
+    }
+  }
+  @keyframes typing-5 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 141px;
+    }
+  }
+  @keyframes cursor {
+    from, to, 20%, 80% {
+      border-color: transparent;
+    }
+    25%, 75% {
+      border-color: white;
+    }
+  }
+  @keyframes cursor-persist {
+    from, 45% {
+      border-color: transparent;
+    }
+    50%, to {
+      border-color: white;
+    }
+  }
+
+
+  /* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+/* For tablets */
+@media (max-width: 1024px) {
+  .illustration-editor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .code {
+      position: static; /* Allow code blocks to flow normally */
+      margin: 1rem 0;
+      width: 90vw;
+      max-width: 30rem;
+  }
+
+  .code-html{
+    height: 25rem;
+  }
+
+  .code-html,
+  .code-css,
+  .code-js {
+      position: static; /* Remove absolute positioning on mobile */
+      left: auto;
+      top: auto;
+      max-width: 30rem;
+  }
+
+  .editor-block{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .illustration-editor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .code {
+      width: 95vw;
+      max-width: 95%;
+      position: relative;
+  }
+
+  .code .code-content {
+      font-size: 0.8rem;
+  }
+
+  .editor-block{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+}
+
+/* For smaller mobile devices */
+@media (max-width: 480px) {
+  .code {
+      width: 95vw;
+      max-width: 95%;
+  }
+
+  .code .code-content {
+      font-size: 0.75rem;
+  }
+
+  .editor-block{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+}

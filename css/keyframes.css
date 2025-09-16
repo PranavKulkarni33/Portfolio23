@@ -1,0 +1,44 @@
+@keyframes a {
+    0%, 25% {
+      transform: var(--pos) translate3d(calc(var(--sgn-i)*var(--x)), calc(var(--sgn-j)*var(--y)), calc(var(--sgn-k)*var(--zf)*2em)) scale(0);
+    }
+    75%, 100% {
+      border-radius: 50%;
+      transform: var(--pos);
+    }
+  }
+
+
+  @keyframes stack {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    }
+    60% {
+      opacity: 0.5;
+      transform: translateX(50%);
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+      transform: translate(var(--glitch-translate));
+    }
+    2% {
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    4%, 100% {  
+      text-shadow: none; 
+      transform: none; 
+    }
+  }

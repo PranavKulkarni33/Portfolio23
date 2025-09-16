@@ -1,0 +1,56 @@
+/* Dark theme base */
+.contact {
+    background-color: #121212;
+    color: #f0f0f0;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  /* Form layout */
+  .php-email-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Input + Textarea styles */
+  .php-email-form .form-control {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #444;
+    padding: 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .php-email-form .form-control::placeholder {
+    color: #aaa;
+  }
+  
+  .php-email-form .form-control:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.2);
+    outline: none;
+  }
+  
+  /* Form groups spacing */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Optional: Add a submit button */
+  .php-email-form button[type="submit"] {
+    background-color: #C281FF;
+    color: #121212;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .php-email-form button[type="submit"]:hover {
+    background-color: #0097a7;
+  }
+  

@@ -1,0 +1,45 @@
+.ball:nth-child(7n + 1) { --i: 0 }
+            .ball:nth-child(n + 1):nth-child(-n + 7),.ball:nth-child(n + 50):nth-child(-n + 56),.ball:nth-child(n + 99):nth-child(-n + 105),.ball:nth-child(n + 148):nth-child(-n + 154),.ball:nth-child(n + 197):nth-child(-n + 203),.ball:nth-child(n + 246):nth-child(-n + 252),.ball:nth-child(n + 295):nth-child(-n + 301) { --j: 0 }
+              .ball:nth-child(n + 1) { --k: 0 }.ball:nth-child(7n + 2) { --i: 1 }
+            .ball:nth-child(n + 8):nth-child(-n + 14),.ball:nth-child(n + 57):nth-child(-n + 63),.ball:nth-child(n + 106):nth-child(-n + 112),.ball:nth-child(n + 155):nth-child(-n + 161),.ball:nth-child(n + 204):nth-child(-n + 210),.ball:nth-child(n + 253):nth-child(-n + 259),.ball:nth-child(n + 302):nth-child(-n + 308) { --j: 1 }
+              .ball:nth-child(n + 50) { --k: 1 }.ball:nth-child(7n + 3) { --i: 2 }
+            .ball:nth-child(n + 15):nth-child(-n + 21),.ball:nth-child(n + 64):nth-child(-n + 70),.ball:nth-child(n + 113):nth-child(-n + 119),.ball:nth-child(n + 162):nth-child(-n + 168),.ball:nth-child(n + 211):nth-child(-n + 217),.ball:nth-child(n + 260):nth-child(-n + 266),.ball:nth-child(n + 309):nth-child(-n + 315) { --j: 2 }
+              .ball:nth-child(n + 99) { --k: 2 }.ball:nth-child(7n + 4) { --i: 3 }
+            .ball:nth-child(n + 22):nth-child(-n + 28),.ball:nth-child(n + 71):nth-child(-n + 77),.ball:nth-child(n + 120):nth-child(-n + 126),.ball:nth-child(n + 169):nth-child(-n + 175),.ball:nth-child(n + 218):nth-child(-n + 224),.ball:nth-child(n + 267):nth-child(-n + 273),.ball:nth-child(n + 316):nth-child(-n + 322) { --j: 3 }
+              .ball:nth-child(n + 148) { --k: 3 }.ball:nth-child(7n + 5) { --i: 4 }
+            .ball:nth-child(n + 29):nth-child(-n + 35),.ball:nth-child(n + 78):nth-child(-n + 84),.ball:nth-child(n + 127):nth-child(-n + 133),.ball:nth-child(n + 176):nth-child(-n + 182),.ball:nth-child(n + 225):nth-child(-n + 231),.ball:nth-child(n + 274):nth-child(-n + 280),.ball:nth-child(n + 323):nth-child(-n + 329) { --j: 4 }
+              .ball:nth-child(n + 197) { --k: 4 }.ball:nth-child(7n + 6) { --i: 5 }
+            .ball:nth-child(n + 36):nth-child(-n + 42),.ball:nth-child(n + 85):nth-child(-n + 91),.ball:nth-child(n + 134):nth-child(-n + 140),.ball:nth-child(n + 183):nth-child(-n + 189),.ball:nth-child(n + 232):nth-child(-n + 238),.ball:nth-child(n + 281):nth-child(-n + 287),.ball:nth-child(n + 330):nth-child(-n + 336) { --j: 5 }
+              .ball:nth-child(n + 246) { --k: 5 }.ball:nth-child(7n + 7) { --i: 6 }
+            .ball:nth-child(n + 43):nth-child(-n + 49),.ball:nth-child(n + 92):nth-child(-n + 98),.ball:nth-child(n + 141):nth-child(-n + 147),.ball:nth-child(n + 190):nth-child(-n + 196),.ball:nth-child(n + 239):nth-child(-n + 245),.ball:nth-child(n + 288):nth-child(-n + 294),.ball:nth-child(n + 337):nth-child(-n + 343) { --j: 6 }
+              .ball:nth-child(n + 295) { --k: 6 }
+#preloader{
+    overflow: hidden;
+    height: 100vh;
+    display: grid;
+}
+#preloader div{
+    display: grid;
+}
+
+.a3d {
+    --tmp: repeat(var(--n), 2em);
+    grid-template: var(--tmp)/var(--tmp);
+    place-self: center;
+    transform-style: preserve-3d;
+    transform: rotatex(-35.2643896828deg) rotatey(45deg);
+  }
+  
+  .ball {
+    --m: calc(.5*(var(--n) - 1));
+    --sgn-i: clamp(-1, (var(--i) - var(--m))/.5, 1);
+    --sgn-j: clamp(-1, (var(--j) - var(--m))/.5, 1);
+    --sgn-k: clamp(-1, (var(--k) - var(--m))/.5, 1);
+    grid-area: calc(var(--j) + 1)/calc(var(--i) + 1);
+    --pos:
+        translatez(calc((var(--k) - var(--m))*2em))
+        rotatey(-45deg) rotatex(35.2643896828deg);
+    box-shadow: 0 0 0 2px;
+    background: hsl(0, 0%, calc((1 - var(--j)/var(--n))*100%));
+    animation: a 1s cubic-bezier(0.32, 1, 0.68, 1) calc((var(--i)/var(--n) - 1)*1s) infinite alternate;
+  }

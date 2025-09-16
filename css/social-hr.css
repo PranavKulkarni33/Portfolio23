@@ -1,0 +1,141 @@
+
+/* ================== SOCIAL - HR ================ */
+
+.social-hr{
+    padding: 2% ;
+  }
+  
+  @media screen and (max-width: 480px){
+    .social-hr {
+      padding: 0.5%;
+    }
+  }
+  
+  .social-hr ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .social-hr li {
+      list-style:none;
+      justify-self: center;
+  }
+  
+  .social-hr li a {
+      display:block;
+      position:relative;
+      width:80px;
+      height:80px;
+      line-height:80px;
+      font-size:30px;
+      text-align:center;
+      text-decoration:none;
+      color:#ffffff;
+      margin: 0 30px;
+      transition:.5s;
+  }
+  
+  .social-hr li a span {
+      position:absolute;
+      transition: transform .5s;
+  }
+  
+  .social-hr li a span:nth-child(1),
+      .social-hr li a span:nth-child(3){
+      width:100%;
+      height:3px;
+      background:#404040;
+  }
+  
+  .social-hr li a span:nth-child(1) {
+      top:0;
+      left:0;
+      transform-origin: right;
+  }
+  
+  .social-hr li a:hover span:nth-child(1) {
+      transform: scaleX(0);
+      transform-origin: left;
+      transition:transform .5s;
+  }
+    
+  .social-hr li a span:nth-child(3) {
+      bottom:0;
+      left:0;
+      transform-origin: left;
+  }
+  
+  .social-hr li a:hover span:nth-child(3) {
+      transform: scaleX(0);
+      transform-origin: right;
+      transition:transform .5s;
+  }
+    
+  .social-hr li a span:nth-child(2),
+  .social-hr li a span:nth-child(4){
+      width:3px;
+      height:100%;
+      background:#404040;
+  }
+  
+  .social-hr li a span:nth-child(2) {
+      top:0;
+      left:0;
+      transform:scale(0);
+      transform-origin: bottom;
+  }
+  
+  .social-hr li a:hover span:nth-child(2) {
+      transform: scale(1);
+      transform-origin: top;
+      transition:transform .5s;
+  }
+  
+  .social-hr li a span:nth-child(4) {
+      top:0;
+      right:0;
+      transform:scale(0);
+      transform-origin: top;
+  }
+  
+  .social-hr li a:hover span:nth-child(4) {
+      transform: scale(1);
+      transform-origin: bottom;
+      transition:transform .5s;
+  }
+    
+    .github:hover {
+      color: #692886;
+    }
+    .github:hover span { 
+      background: #692886;
+    }
+    .leetcode:hover {
+      color: #E7A41F;
+    }
+    .leetcode:hover span { 
+      background: #E7A41F;
+    }
+    .instagram:hover {
+      color: #c32aa3;
+    }
+    .instagram:hover span { 
+      background: #c32aa3;
+    }
+    .linkedin:hover {
+      color: #0077B5;
+    }
+    .linkedin:hover span { 
+      background: #0077B5;
+    }
+    .social-hr li a .twitter {
+      color: #1da1f2;
+    }
+    .social-hr li a:hover:nth-child(3) {
+      color: #c32aa3;
+    }
+    .social-hr li a:hover:nth-child(4) {
+      color: #dd4b39;
+    }
+  
